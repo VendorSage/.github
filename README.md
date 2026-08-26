@@ -1,27 +1,22 @@
 # .github
 
-Org-wide defaults for the `VendorSage` org (the company is **Node**; the org login is
-unchanged by the rebrand).
+Org-wide defaults.
 
-GitHub serves anything in `.github/ISSUE_TEMPLATE/` here to **every repo in the org that has
-no `.github/ISSUE_TEMPLATE/` of its own**. A repo with its own templates ignores these
-entirely.
+Anything in `.github/ISSUE_TEMPLATE/` here is served to every repository in the organisation
+that has no `.github/ISSUE_TEMPLATE/` of its own. A repository with its own templates ignores
+these entirely.
 
-## What is here, and what is deliberately not
+## Why this repository is public
 
-Only **Task** — the one issue type that gets filed in a code repo.
+It has to be. GitHub only serves default community health files from a **public** `.github`
+repository — a private one is silently ignored, with no warning and no template. That was
+verified rather than assumed.
 
-`product-engineering` owns the other three (Product Epic, Planning work, Decision needed)
-because all of them produce something that lives in that repo: a phase spanning several
-repos, or a document that merges there. It also has its own templates, so it never inherits
-from here.
+Because it is public, keep everything here generic. No repository names, no file paths, no
+project or initiative names, no internal URLs. If a template needs that detail, it belongs in
+the repository it applies to, not here.
 
-Blank issues stay enabled. A code repo needs a way to file a quick bug without ceremony, and
-forcing every one through the Task form would just get worked around.
+## What is here
 
-## Changing the Task template
-
-Edit `.github/ISSUE_TEMPLATE/task.yml` and push. It takes effect immediately in every repo
-that inherits it — there is no per-repo copy to update. Keep it in step with
-[`product-engineering`](https://github.com/VendorSage/product-engineering)'s own `task.yml`,
-which is the version that repo uses.
+Only **Task** — the one issue type filed in a code repository. Everything else is specific to
+a single repository and lives there.

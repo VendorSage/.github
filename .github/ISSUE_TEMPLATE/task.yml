@@ -4,18 +4,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Typing `#123` here would not link this to its epic** — that is a mention, and it
-        never reaches the epic's progress bar. Use **Create sub-issue** on the epic instead,
-        or `scripts/new-task.sh <repo> <epic> "<title>"` from `product-engineering`. Already
-        filed? Link it from the epic's **Add sub-issue**.
+        Link this to its epic using **Create sub-issue** on the epic. Typing `#123` here is
+        only a mention and will not link it — it never reaches the epic's progress bar.
   - type: input
     id: plan
     attributes:
       label: Plan
-      description: >
-        Path to the plan in product-engineering, once it is merged. Leave blank if the work
-        is small enough not to need one.
-      placeholder: initiatives/agent-manager/plans/0001-thread-contracts.md
+      description: Path to the merged plan, if this work needed one. Leave blank if not.
   - type: textarea
     id: what
     attributes:
