@@ -1,0 +1,31 @@
+name: Task
+description: A single piece of work under an epic.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Typing `#123` here would not link this to its epic** — that is a mention, and it
+        never reaches the epic's progress bar. Use **Create sub-issue** on the epic instead,
+        or `scripts/new-task.sh <repo> <epic> "<title>"` from `product-engineering`. Already
+        filed? Link it from the epic's **Add sub-issue**.
+  - type: input
+    id: plan
+    attributes:
+      label: Plan
+      description: >
+        Path to the plan in product-engineering, once it is merged. Leave blank if the work
+        is small enough not to need one.
+      placeholder: initiatives/agent-manager/plans/0001-thread-contracts.md
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to happen
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: The observable condition. A test that passes, a flow that works.
+    validations:
+      required: true
